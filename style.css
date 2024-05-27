@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* :root {
+    --scroll-padding : 10rem;
+} */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 1rem);
+}
+
+section {
+    padding-top: 4rem ;
+    padding-bottom: 10rem;
+    height: 100vh;
+   
+}
+
+.AllSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 500px));
+    gap: 2rem;
+    justify-content: center;
+}
+
+section h1 {
+    position: absolute;
+    top: 10px;
+}
+
+
+/* STYLING THE ARTICLE BOXES */
+/* .pageImage {
+    width: 40%;
+}
+
+.textBox {
+    width: 40%;
+} */
+
+
+.Place-section {
+    /* padding-top: 2rem; */
+    background-color: white;
+    color: aquamarine;
+    border: 1px solid aquamarine;
+}
+
+.service-section {
+    background-color: white;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+
+.tool-section {
+    background-color: white;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+.showTime-section {
+    background-color: white;
+    color: rgb(10, 10, 10);
+    border: 1px solid rgb(10, 10, 10);
+}
+
+.newLook-section {
+    background-color: brown;
+    color: white;
+}
+
+.latestHair-section {
+    background-color: chartreuse;
+}
+
+.newPedicure-section {
+    background-color: darkblue;
+}
+
+.market-section {
+    background-color: beige;
+}
+
+.homeServices-section {
+    background-color: coral;
+}
+
+.whatYouMayLike-section {
+    background-color: black;
+    color: white;
+}
+
+/* NAVIGATION SECTION */
+nav {
+    background: blue;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 11111;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+ul .btn {
+    display: none;
+}
+
+/* #check {
+    display: none;
+} */
+
+@media (max-width: 952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+   .menuBars {
+        display: block;
+    }
+
+    .closeBtn {
+       position: absolute;
+       right:0;
+       top: 0;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding:0 50px;
+        padding-left: 30px;
+    }
+
+   nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(24, 19, 19, 0.6);
+        top: 0;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 111111;
+    }
+
+    nav ul li {
+        display: block;
+        border: 1px solid white;
+        position: relative;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+        width: 100%;
+        padding: 0;
+        z-index: 1111;
+    }
+
+    nav ul li:hover a {
+        background: red;
+        color: white;
+    }
+
+    /* #check:checked ~ ul {
+        left: 0;
+    } */
+
+}
+
+@media (max-width: 600px) {
+    .menuBtn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .closeBtn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        height: 80px;
+        border: 1px solid white;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    /* #check:checked ~ ul {
+        left: 0;
+    } */
+}
+
+.landingPageTabContainer {
+    display: flex;
+    margin: 10px;
+    gap: 15px;
+    background: rgba(221, 214, 214, 0.1);
+}
+
+.landingPageTab {
+    width: 50%;
+    background: rgba(226, 222, 222, 0.2);
+}
+
+.textBase {
+    background: rgba(107, 104, 104, 0.3);
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBase h1 {
+    text-align: center;
+    background-color: rgb(250, 245, 245);
+    color: rgb(126, 120, 120);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.landingPageTab.imageBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* margin: 0 auto; */
+}
+
+.landingPageTab h1 {
+    text-align: center;
+    background-color: rgb(250, 245, 245);
+    color: rgb(126, 120, 120);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.imageBox {
+    height: 100%;
+    overflow-y:scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.imageBox img {
+    width: 190px;
+    margin:8px;
+    filter: grayscale(50%);
+    transition: transform 0.6s;
+}
+
+.imageBox img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* FOOTER SECTION */
+footer {
+    z-index: 10000;
+    position: fixed;
+    display: flex;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    justify-content: space-between;
+    padding:  8px;
+    bottom: -120px;
+    width: 100%;
+    transition: all 0.8s;
+}
+
+footer:hover {
+    bottom: 0;
+
+}
+
+footer div ul li {
+    list-style: none;
+}
+
+footer div ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+footer div ul li a:hover {
+    border-bottom: 5px solid white;
+    transition: ease-in-out 0.5s;
+}
